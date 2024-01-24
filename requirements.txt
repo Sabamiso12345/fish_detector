@@ -1,0 +1,8 @@
+fastapi
+PIL
+ultralytics
+numpy
+matplotlib
+io
+streamlit
+requests
