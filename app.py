@@ -17,8 +17,9 @@ if uploaded_file is not None:
     if st.button('魚を探す'):
         # FastAPIエンドポイントに画像を送信
         files = {"file": uploaded_file.getvalue()}
-        response = requests.post("http://127.0.0.1:8000/detect/", files=files)
-
+        #response = requests.post("http://127.0.0.1:8000/detect/", files=files)
+        response = requests.post("https://fish-detector.onrender.com/detect/", files=files)#renderのURLに変更
+        
         # 結果を表示
         if response.status_code == 200:
             image = Image.open(BytesIO(response.content))
