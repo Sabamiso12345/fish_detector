@@ -2,7 +2,6 @@ fastapi
 ultralytics
 numpy
 matplotlib
-io
 streamlit
 requests
 Pillow
