@@ -6,3 +6,4 @@ streamlit
 requests
 Pillow
 uvicorn
+python-multipart
