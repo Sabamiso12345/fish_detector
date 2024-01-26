@@ -19,10 +19,13 @@ if uploaded_file is not None:
         files = {"file": uploaded_file.getvalue()}
         #response = requests.post("http://127.0.0.1:8000/detect/", files=files)
         response = requests.post("https://fish-detector.onrender.com/detect/", files=files)#renderのURLに変更
-        
+    
+
+
         # 結果を表示
         if response.status_code == 200:
             image = Image.open(BytesIO(response.content))
             st.image(image, caption="魚がいるといいね", use_column_width=True)
         else:
-            st.error("エラーです。残念。")
+            st.error("エラーになっちゃった。もう一回試してみて。")
+            
